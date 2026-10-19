@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<title>Data Deletion Instructions — Solvo</title>
+<meta name="description" content="How Solvo users can delete their data collected through Facebook Login — self-service, in-app, or by request." />
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+    background: #fafafa;
+    color: #171717;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #737373; margin: 0 0 8px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 12px; }
+  h2 { font-size: 21px; letter-spacing: -0.01em; margin: 40px 0 10px; }
+  h3 { font-size: 16px; margin: 0 0 8px; }
+  p.lead { font-size: 16px; color: #525252; margin: 0 0 8px; }
+  ul { padding-left: 22px; margin: 10px 0; }
+  li { margin: 5px 0; color: #525252; }
+  ol { padding-left: 22px; margin: 10px 0; }
+  .card { border: 1px solid #e5e5e5; border-radius: 14px; padding: 18px 20px; margin: 14px 0; background: #fff; }
+  .ok { border: 1px solid #6ee7b7; background: #ecfdf5; border-radius: 14px; padding: 18px 20px; margin: 0 0 28px; display: none; }
+  .ok h2 { margin: 0 0 6px; font-size: 18px; color: #047857; }
+  code.badge { display: inline-block; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; word-break: break-all; }
+  a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .muted { color: #737373; font-size: 14px; }
+  footer { border-top: 1px solid #e5e5e5; margin-top: 44px; padding-top: 20px; font-size: 14px; color: #737373; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0a0a0a; color: #ededed; }
+    p.lead, li, .muted, footer { color: #a3a3a3; }
+    .card { background: #141414; border-color: #2e2e2e; }
+    .ok { background: #052e1c; border-color: #14532d; }
+    code.badge { background: #0a0a0a; border-color: #3f3f3f; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Solvo · Solvosys</p>
+  <h1>Data Deletion Instructions</h1>
+  <p class="lead">How to delete the data Solvo receives through Facebook Login — instantly, on your own, or by request. You are always in control of your data.</p>
+
+  <section class="ok" id="ok-box" aria-label="Deletion confirmation">
+    <h2>Deletion request received</h2>
+    <p class="muted">Your Facebook data deletion request has been processed. Keep this confirmation code for your records:</p>
+    <p><code class="badge" id="conf-code"></code></p>
+  </section>
+
+  <h2>What data Solvo stores from Facebook</h2>
+  <p class="muted">When you connect Facebook or Instagram inside Solvo, we store only what the connection needs to work:</p>
+  <ul>
+    <li>Your Facebook name, email and user ID</li>
+    <li>The Facebook Pages you manage (name and fan count)</li>
+    <li>Linked Instagram Business/Creator account metrics</li>
+    <li>An encrypted access token (AES-256-GCM, never plaintext)</li>
+  </ul>
+  <p class="muted">We never post to your accounts, and we never sell or share your data with third parties.</p>
+
+  <h2>How to delete your data</h2>
+
+  <div class="card">
+    <h3>Option 1 — Remove Solvo from your Facebook account (instant)</h3>
+    <ol>
+      <li>Open <a href="https://www.facebook.com/settings?tab=applications" rel="noopener noreferrer">facebook.com/settings → Apps and Websites</a></li>
+      <li>Select <strong>Solvosys</strong></li>
+      <li>Tap <strong>Remove</strong> and confirm</li>
+    </ol>
+    <p class="muted">Facebook immediately notifies us and we delete your stored Facebook and Instagram data automatically.</p>
+  </div>
+
+  <div class="card">
+    <h3>Option 2 — Disconnect inside Solvo</h3>
+    <p class="muted">In the Solvo app: <strong>Profile → Connected accounts</strong> → select Facebook or Instagram → <strong>Disconnect</strong>. This deletes the stored token, profile and metrics from our servers right away.</p>
+  </div>
+
+  <div class="card">
+    <h3>Option 3 — Request by email</h3>
+    <p class="muted">Email <a href="mailto:vikas.shevale@yahoo.com?subject=Data%20Deletion%20Request">vikas.shevale@yahoo.com</a> with the subject <strong>“Data Deletion Request”</strong> and the email address on your Facebook account. We process every request within 30 days and reply with a confirmation code.</p>
+  </div>
+
+  <h2>What gets deleted</h2>
+  <ul>
+    <li>Facebook / Instagram access tokens</li>
+    <li>Your name, email and Facebook user ID</li>
+    <li>Page fan counts and Instagram account metrics</li>
+  </ul>
+  <p class="muted">Deleting removes everything Facebook-related we hold about you. Solvo account data that is not tied to Facebook (campaign history, wallet, earnings) is handled separately — mention it in your email if you want that deleted too.</p>
+
+  <footer>
+    Questions? Contact <a href="mailto:vikas.shevale@yahoo.com">vikas.shevale@yahoo.com</a>.
+  </footer>
+</main>
+<script>
+  (function () {
+    try {
+      var m = new URLSearchParams(window.location.search).get('confirmation_code');
+      if (m) {
+        document.getElementById('conf-code').textContent = m;
+        document.getElementById('ok-box').style.display = 'block';
+      }
+    } catch (e) { /* no-op */ }
+  })();
+</script>
+</body>
+</html>
